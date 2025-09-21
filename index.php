@@ -86,7 +86,11 @@ if (isset($_SESSION["usuario"]) && isset($_GET["encontrado"])) {
             if ($campo == "IMG") {
                 $imgPokemon = $datoPokemon;
                 echo "<td><img src='" . $imgPokemon . "'></td>";
-            } else {
+            } elseif ($campo == "TIPO"){
+                $tipo = $datoPokemon;
+                echo "<td><img src='tipos/".$tipo.".png' alt='".$tipo."' style='width: 20%'></td>";
+
+            }else{
                 echo "<td>" . $datoPokemon . "</td>";
             }
         }
