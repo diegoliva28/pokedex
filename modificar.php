@@ -1,5 +1,4 @@
 <?php
-echo "Llegaste a modificar el pokemon pa";
 SESSION_START();
 if (!isset($_SESSION["usuario"])) {
     header("location:index.php");
@@ -11,6 +10,10 @@ if (!isset($_SESSION["usuario"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Registrar Pokemon</title>
+    <link rel="stylesheet" href="styles/modificar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Quicksand:wght@300..700&family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
 </head>
 <body>
 <?php
@@ -28,13 +31,17 @@ $listaDeEncontrados = mysqli_num_rows($resultadoDetalle);
 if ($listaDeEncontrados > 0){
 $pokemonBuscado = mysqli_fetch_all($resultadoDetalle, MYSQLI_ASSOC);
 $pokemon = $pokemonBuscado[0];
-echo "<div>";
+echo "<div class='modificar-container'>";
 echo "<img src='" . $pokemon["IMG"] . "'>";
+echo "<div class='info-form'>";
+echo "<div class='pokemon-info'>";
 foreach ($pokemon as $key => $value) {
     if ($key != "IMG") {
         echo "<h4>" . $key . " " . $value . "</h4>";
     }
 }
+echo "</div>";
+echo "</div>";
 echo "</div>";
 }
 $conexionBD->close();

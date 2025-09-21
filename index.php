@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokedex</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Quicksand:wght@300..700&family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
     <style>
         img {
             width: 30%;
@@ -36,7 +40,7 @@ if (isset($_SESSION["usuario"]) && isset($_GET["encontrado"])) {
 ?>
 <form action="detalle.php" method="GET" enctype="multipart/form-data">
     <input type="text" name="buscado" placeholder="Ingrese el nombre, tipo o numero del pokemon">
-    <button type="submit">Ingresar</button>
+    <button type="submit">Buscar</button>
 </form>
 
 <table>
