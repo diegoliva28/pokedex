@@ -7,7 +7,7 @@
 $conexionBD = mysqli_connect("localhost",
     "root",
     "",
-    "pokedex");
+    "pokedexPropio");
 //var_dump($conexionBD);
 //echo "<br>";
 //print_r($conexionBD);

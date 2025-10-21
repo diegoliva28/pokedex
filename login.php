@@ -9,7 +9,7 @@ $contraUsuario = $_POST["password"];
 $conexionBD = mysqli_connect("localhost",
     "root",
     "",
-    "pokedex");
+    "pokedexPropio");
 
 $usuarioQuery = "SELECT * FROM usuarios 
          where nombre='" . $nombreUsuario . "' 

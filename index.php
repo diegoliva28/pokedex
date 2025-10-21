@@ -49,7 +49,7 @@ if (isset($_SESSION["usuario"]) && isset($_GET["encontrado"])) {
     $conexionBD = mysqli_connect("localhost",
             "root",
             "",
-            "pokedex");
+            "pokedexPropio");
 
     //Consulta de cabeceras de la tabla
     $cabeceraQuery = "Show columns FROM pokemon";

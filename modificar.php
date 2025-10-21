@@ -21,7 +21,7 @@ $nombrePokemon = $_GET["pokemon"];
 $conexionBD = mysqli_connect("localhost",
     "root",
     "",
-    "pokedex");
+    "pokedexPropio");
 
 $detalleSQL = "SELECT * FROM pokemon where nombre='" . $nombrePokemon . "';";
 $resultadoDetalle = mysqli_query($conexionBD, $detalleSQL);
@@ -108,7 +108,7 @@ if ($valorImg && isset($_POST["nombre"])) {
     $conexionBD = mysqli_connect("localhost",
         "root",
         "",
-        "pokedex");
+        "pokedexPropio");
 if ($valor) {
     foreach ($camposAModificar as $key => $value) {
         $modificacionQuery = "UPDATE pokemon SET " . $key . "='" . $value . "' where nombre='" . $_GET["pokemon"] . "';";
