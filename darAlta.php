@@ -93,7 +93,7 @@ if ($valorImg && $valor) {
     $conexionBD = mysqli_connect("localhost",
             "root",
             "",
-            "pokedexPropio");
+            "pokedexPropia");
 
     $nuevoRegistroQuery = "insert into pokemon (NRO,IMG,NOMBRE,TIPO,DESCRIPCION)
     values (

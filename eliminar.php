@@ -4,7 +4,7 @@ if (isset($_SESSION['usuario'])) {
     $conexionBD = mysqli_connect("localhost",
         "root",
         "",
-        "pokedexPropio");
+        "pokedexPropia");
 
     $eliminarPokemonQuery = "Delete from pokemon where nombre='" . $_GET["pokemon"] . "'";
     $resultado = mysqli_query($conexionBD, $eliminarPokemonQuery);

@@ -23,7 +23,7 @@ $nombrePokemon=$_GET["buscado"];
 $conexionBD = mysqli_connect("localhost",
     "root",
         "",
-    "pokedexPropio");
+    "pokedexPropia");
 
 $detalleSQL="SELECT * FROM pokemon where nombre='".$nombrePokemon."';";
 $resultadoDetalle=mysqli_query($conexionBD,$detalleSQL);
